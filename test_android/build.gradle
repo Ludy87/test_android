@@ -5,7 +5,7 @@ def versionsNumber = '1.2.3'
 ext {
     bintrayRepo = 'maven'
     // darf nicht geändert werden
-    bintrayName = 'SessionCookieReader'
+    bintrayName = 'test_android'
     // der Name den wir bei maven eingetragen haben
 
     publishedGroupId = 'org.astra_g'
