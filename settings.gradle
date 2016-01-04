@@ -1,0 +1,1 @@
+include ':myapplication', ':test_android'
