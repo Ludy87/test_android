@@ -1,7 +1,9 @@
 package org.astra_g.test_android;
 
-/**
- * Created by Ludy on 04.01.2016.
- */
+import android.util.Log;
+
 public class Test {
+    public Test() {
+        Log.d("Test", "Test fertig");
+    }
 }
