@@ -1,5 +1,45 @@
 apply plugin: 'com.android.library'
 
+def versionsNumber = '1.2.3'
+// beschreibt die Versionsnummer und zugleich den Versionsnamen
+ext {
+    bintrayRepo = 'maven'
+    // darf nicht geändert werden
+    bintrayName = 'SessionCookieReader'
+    // der Name den wir bei maven eingetragen haben
+
+    publishedGroupId = 'org.astra_g'
+    // entspricht der GroupId von bintray.com
+    libraryName = 'test_android'
+    // Name der Library
+    artifact = 'test_android'
+    // der Teil der hinter der org.astra_g kommt also von bei mir test_android
+
+    libraryDescription = 'test_android ist eine Test Library und kann nichts'
+    // Beschreibung
+
+    siteUrl = 'https://github.com/Ludy87/test_android'
+    // die Übersichtsseite vom Projekt in github.com
+    gitUrl = 'https://github.com/Ludy87/test_android.git'
+    // Url zur Git-Resource
+
+    libraryVersion = versionsNumber
+    // wurden von uns weiter Oben defeniert
+    developerId = 'ludy'
+    // Deinen Entwicklernamen oder -firma
+    developerName = 'ludy'
+    // Deinen Entwicklernamen oder -firma
+    developerEmail = 'android-antispam@astra-g.org'
+    // deine Email-Adresse wo der Nutzer uns schreiben kann
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    // Name unter welche Lizenzvereinbarung wir veröffentlichen
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    // wo die Lizenz nachlesbar ist
+    allLicenses = ["Apache-2.0"]
+    // definierte Lizenz
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -22,3 +62,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
 }
+
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/bintrayv1.gradle'
