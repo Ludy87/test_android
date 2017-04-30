@@ -1,1 +1,1 @@
-include ':myapplication', ':test_android'
+include ':test_android'
